@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from '../views/Home.vue'
 import BMI from '../views/BmiPage.vue'
+import Todo from '../views/TodoPage.vue'
 
 const routes = [
     {
@@ -18,7 +19,16 @@ const routes = [
         meta: {
             title: 'BMI'
         }
+    },
+    {
+        path: '/todo',
+        name: 'TodoPage',
+        component: Todo,
+        meta: {
+            title: "Todo"
+        }
     }
+
 ]
 
 const router = createRouter({
