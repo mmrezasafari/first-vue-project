@@ -18,7 +18,8 @@ export default {
                     name: 'todo-app',
                     header: 'Todo',
                     title: 'Register so you do not forget',
-                    text: 'write your to do here!'
+                    text: 'write your to do here!',
+                    link: 'todo'
                 },
                 {
                     name: 'color-picker',
