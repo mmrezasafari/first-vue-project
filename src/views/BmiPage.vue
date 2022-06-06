@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 d-flex flex-column p-4 bmi-template">
                 <header class="bmi-header d-flex justify-content-center"><h4>Calculate BMI</h4></header>
-                <main class="bmi-main">
+                <article class="bmi-main">
                     <article class="bmi-inputs d-flex flex-column">
                         <section class="input-height d-flex justify-content-center my-3">
                             <label class="mx-2 d-flex align-items-center" for="height">Height(cm)</label>
@@ -14,7 +14,7 @@
                             <input type="number" v-model="weight" class="self-input p-1" id="weight" />
                         </section>
                         <section class="input-button d-flex justify-content-center my-2">
-                            <button type="button" class="self-button p-1" @click="handleOnClick">Calculate</button>
+                            <button type="button" class="self-button p-1 btn-warning" @click="handleOnClick">Calculate</button>
                         </section>
                         <section class="result d-flex justify-content-center">
                             <span :class="`result-range ${(result && (range === 'Underweight' || range === 'Overweight')) ? 'bg-warning' : (result && (range === 'healthy')) ? 'bg-success' : (result) ? 'bg-danger' : ''}`">
@@ -22,7 +22,7 @@
                             </span>
                         </section>
                     </article>&nbsp;
-                </main>
+                </article>
             </div>
         </div>
     </div>
@@ -66,9 +66,7 @@ export default {
 
 <style>
 .container {
-    height: 100vh;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    height: 100%;
 }
 
 .bmi-template{
@@ -89,6 +87,7 @@ button{
     background-color: whitesmoke;
     border: 2px solid black;
     border-radius: 20px;
+    margin: 20px;
 }
 
 .result-range{
