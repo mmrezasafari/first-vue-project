@@ -2,13 +2,11 @@
     <div class="container d-flex align-items-center justify-content-center">
         <div class="row bmi-template">
             <div class="col-12 d-flex flex-column p-4">
-                <header class="bmi-header d-flex justify-content-center"><h4>Calculate BMI</h4></header>
+                <header class="bmi-header d-flex justify-content-center">
+                    <h4>Calculate BMI</h4>
+                </header>
                 <article class="bmi-main">
-<<<<<<< HEAD
                     <div class="bmi-inputs d-flex flex-column">
-=======
-                    <article class="bmi-inputs d-flex flex-column">
->>>>>>> 3ec17c9439095178631e03622e2d4b050618eb66
                         <section class="input-height d-flex justify-content-center my-3">
                             <label class="mx-2 d-flex align-items-center" for="height">Height(cm)</label>
                             <input type="number" v-model="height" class="self-input p-1" id="height" />
@@ -18,18 +16,16 @@
                             <input type="number" v-model="weight" class="self-input p-1" id="weight" />
                         </section>
                         <section class="input-button d-flex justify-content-center my-2">
-                            <button type="button" class="self-button p-1 btn-warning" @click="handleOnClick">Calculate</button>
+                            <button type="button" class="self-button p-1 btn-warning"
+                                @click="handleOnClick">Calculate</button>
                         </section>
                         <section class="result d-flex justify-content-center">
-                            <span :class="`result-range ${(result && (range === 'Underweight' || range === 'Overweight')) ? 'bg-warning text-white' : (result && (range === 'healthy')) ? 'bg-success text-white' : (result) ? 'bg-danger text-white' : ''}`">
-                                BMI: {{ result ? result : '' }}&nbsp;|&nbsp;{{result ? range : ''}}
+                            <span
+                                :class="`result-range ${(result && (range === 'Underweight' || range === 'Overweight')) ? 'bg-warning text-white' : (result && (range === 'healthy')) ? 'bg-success text-white' : (result) ? 'bg-danger text-white' : ''}`">
+                                BMI: {{ result ? result : '' }}&nbsp;|&nbsp;{{ result ? range : '' }}
                             </span>
                         </section>
-<<<<<<< HEAD
-                    </div>&nbsp;
-=======
-                    </article>&nbsp;
->>>>>>> 3ec17c9439095178631e03622e2d4b050618eb66
+                    </div>
                 </article>
             </div>
         </div>
@@ -57,13 +53,13 @@ export default {
             } else {
                 this.result = (this.weight / (this.height / 100) ** 2).toFixed(1)
             }
-            if(this.result < 18.5){
+            if (this.result < 18.5) {
                 this.range = 'Underweight'
-            }else if(this.result >= 18.5 && this.result < 25){
+            } else if (this.result >= 18.5 && this.result < 25) {
                 this.range = 'healthy'
-            }else if(this.result >= 25 && this.result < 30){
+            } else if (this.result >= 25 && this.result < 30) {
                 this.range = 'Overweight'
-            }else{
+            } else {
                 this.range = 'Obese'
             }
         }
@@ -73,17 +69,14 @@ export default {
 
 
 <style>
-<<<<<<< HEAD
-=======
 .container {
     height: 100%;
 }
 
-.bmi-template{
+.bmi-template {
     background-color: white;
     border-radius: 10px;
 }
->>>>>>> 3ec17c9439095178631e03622e2d4b050618eb66
 
 input {
     width: 80%;
@@ -93,7 +86,7 @@ input {
     background-color: rgba(170, 169, 169, 0.154);
 }
 
-button{
+button {
     width: 20vh;
     background-color: whitesmoke;
     border: 2px solid black;
@@ -101,24 +94,23 @@ button{
     margin: 20px;
 }
 
-.container{
+.container {
     height: 100vh;
 }
 
-.bmi-template{
+.bmi-template {
     min-height: 40vh;
     background-color: whitesmoke;
     border-radius: 12px;
 }
 
-.result-range{
+.result-range {
     background-color: rgba(170, 169, 169, 0.154);
     padding: 10px;
     border-radius: 10px;
 }
 
-.result{
+.result {
     margin-top: 10px;
 }
-
 </style>
