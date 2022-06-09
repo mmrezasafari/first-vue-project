@@ -1,10 +1,10 @@
 <template>
     <div class="container d-flex align-items-center justify-content-center">
-        <div class="row">
-            <div class="col-12 d-flex flex-column p-4 bmi-template">
+        <div class="row bmi-template">
+            <div class="col-12 d-flex flex-column p-4">
                 <header class="bmi-header d-flex justify-content-center"><h4>Calculate BMI</h4></header>
-                <main class="bmi-main">
-                    <article class="bmi-inputs d-flex flex-column">
+                <article class="bmi-main">
+                    <div class="bmi-inputs d-flex flex-column">
                         <section class="input-height d-flex justify-content-center my-3">
                             <label class="mx-2 d-flex align-items-center" for="height">Height(cm)</label>
                             <input type="number" v-model="height" class="self-input p-1" id="height" />
@@ -17,12 +17,12 @@
                             <button type="button" class="self-button p-1" @click="handleOnClick">Calculate</button>
                         </section>
                         <section class="result d-flex justify-content-center">
-                            <span :class="`result-range ${(result && (range === 'Underweight' || range === 'Overweight')) ? 'bg-warning' : (result && (range === 'healthy')) ? 'bg-success' : (result) ? 'bg-danger' : ''}`">
+                            <span :class="`result-range ${(result && (range === 'Underweight' || range === 'Overweight')) ? 'bg-warning text-white' : (result && (range === 'healthy')) ? 'bg-success text-white' : (result) ? 'bg-danger text-white' : ''}`">
                                 BMI: {{ result ? result : '' }}&nbsp;|&nbsp;{{result ? range : ''}}
                             </span>
                         </section>
-                    </article>&nbsp;
-                </main>
+                    </div>&nbsp;
+                </article>
             </div>
         </div>
     </div>
@@ -65,16 +65,6 @@ export default {
 
 
 <style>
-.container {
-    height: 100vh;
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
-}
-
-.bmi-template{
-    background-color: white;
-    border-radius: 10px;
-}
 
 input {
     width: 80%;
@@ -91,10 +81,24 @@ button{
     border-radius: 20px;
 }
 
+.container{
+    height: 100vh;
+}
+
+.bmi-template{
+    min-height: 40vh;
+    background-color: whitesmoke;
+    border-radius: 12px;
+}
+
 .result-range{
     background-color: rgba(170, 169, 169, 0.154);
     padding: 10px;
     border-radius: 10px;
+}
+
+.result{
+    margin-top: 10px;
 }
 
 </style>

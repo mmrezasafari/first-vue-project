@@ -13,14 +13,14 @@ export default {
 </script>
 
 <template>
-    <section :class="`${name} col-6`">
-        <div class="card border-primary mb-3">
+    <section :class="`${name} col-12 col-lg-6`">
+        <div class="card mb-3">
             <div class="card-header">{{header}}</div>
-            <div class="card-body text-primary">
+            <div class="card-body text-primary p-4">
                 <h5 class="card-title text-secondary">{{title}}</h5>
                 <p class="card-text text-dark">{{text}}</p>
                 <router-link :to="`/${link}`">
-                    <button type="button" class="btn btn-primary">start</button>
+                    <button type="button" class="btn btn-warning">start</button>
                 </router-link>
             </div>
         </div>
