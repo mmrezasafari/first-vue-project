@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from '../views/Home.vue'
 import BMI from '../views/BmiPage.vue'
 import Todo from '../views/TodoPage.vue'
+import ColorPicker from '../views/ColorPicker.vue'
 
 const routes = [
     {
@@ -26,6 +27,14 @@ const routes = [
         component: Todo,
         meta: {
             title: "Todo"
+        }
+    },
+    {
+        path: '/colorPicker',
+        name: 'colorPicker',
+        component: ColorPicker,
+        meta: {
+            title: "color-picker"
         }
     }
 
