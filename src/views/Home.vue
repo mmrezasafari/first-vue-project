@@ -25,7 +25,8 @@ export default {
                     name: 'color-picker',
                     header: 'background color',
                     title: 'set your favorite color to background',
-                    text: 'to improve my skill in vue js i create this'
+                    text: 'to improve my skill in vue js i create this',
+                    link: 'colorPicker'
                 },
                 {
                     name: 'modal-popup',
