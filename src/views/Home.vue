@@ -32,7 +32,8 @@ export default {
                     name: 'modal-popup',
                     header: 'Modal',
                     title: 'Modal popup',
-                    text: 'create modal to improve my skill in vue'
+                    text: 'create modal to improve my skill in vue',
+                    link: 'modal'
                 },
                 {
                     name: 'auto-input',

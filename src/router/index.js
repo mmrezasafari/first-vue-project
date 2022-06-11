@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import BMI from '../views/BmiPage.vue'
 import Todo from '../views/TodoPage.vue'
 import ColorPicker from '../views/ColorPicker.vue'
+import ModalPopup from '../views/Modal.vue'
 
 const routes = [
     {
@@ -35,6 +36,14 @@ const routes = [
         component: ColorPicker,
         meta: {
             title: "color-picker"
+        }
+    },
+    {
+        path: '/modal',
+        name: 'modal',
+        component: ModalPopup,
+        meta: {
+            title: "modal popup"
         }
     }
 
