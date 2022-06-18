@@ -46,7 +46,8 @@ export default {
                     name: 'form-validation',
                     header: 'form',
                     title: 'form validate',
-                    text: 'login form validation'
+                    text: 'login form validation',
+                    link: 'formValidation'
                 },
                 {
                     name: 'list-of-users',
