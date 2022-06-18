@@ -39,7 +39,8 @@ export default {
                     name: 'auto-input',
                     header: 'auto input',
                     title: 'fill inputs',
-                    text: 'fill input to see result!'
+                    text: 'fill input to see result!',
+                    link: 'autoInput'
                 },
                 {
                     name: 'form-validation',

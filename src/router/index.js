@@ -4,6 +4,7 @@ import BMI from '../views/BmiPage.vue'
 import Todo from '../views/TodoPage.vue'
 import ColorPicker from '../views/ColorPicker.vue'
 import ModalPopup from '../views/Modal.vue'
+import AutoInput from "../views/AutoInput.vue"
 
 const routes = [
     {
@@ -35,7 +36,7 @@ const routes = [
         name: 'colorPicker',
         component: ColorPicker,
         meta: {
-            title: "color-picker"
+            title: "color picker"
         }
     },
     {
@@ -44,6 +45,14 @@ const routes = [
         component: ModalPopup,
         meta: {
             title: "modal popup"
+        }
+    },
+    {
+        path: '/autoInput',
+        name: 'autoInput',
+        component: AutoInput,
+        mata: {
+            title: "Auto input"
         }
     }
 
